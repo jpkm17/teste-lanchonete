@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title%></title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <h1>Tela de login</h1>
+    <span>
+        <% if( typeof message !== 'undefined') { %>
+            <%= message %>
+            <br>
+        <% } %>
+    </span>
+    <form id="form" action="/checkLogin" method="post">
+        <div>
+            <label>Usuário</label>
+            <input type="text" name="user" placeholder="Digite seu usuário">
+        </div>
+        <div>
+            <label>Senha</label>
+            <input type="text" name="password" placeholder="Digite sua senha">
+        </div>
+        <button type="submit">Acessar</button>
+    </form>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
