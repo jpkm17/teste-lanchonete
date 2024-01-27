@@ -2,8 +2,11 @@ const express = require('express')
 const path = require('path')
 
 const routes = require('./routes/router')
+const db = require('./database/db')
 
 const app = express()
+
+db.connect()
 
 app.set('view engine', 'ejs')
 
