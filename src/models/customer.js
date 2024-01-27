@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
 
 const schema = new mongoose.Schema({
-    nome: String,
+    name: String,
     email: String,
-    telefone: String,
-    endereco: String
+    phone: String,
+    address: String
 })
 
 const CustomerModel = mongoose.model('Customer', schema)
@@ -20,4 +20,4 @@ const newCustomer = new CustomerModel({
 newCustomer.save()
 */ 
 
-module.exports = Model 
+module.exports = CustomerModel 
