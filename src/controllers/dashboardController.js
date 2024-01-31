@@ -35,8 +35,18 @@ function regCustomer(req, res) {
     })
 }
 
+async function listCustomers(req, res){
+    const users = await CustomerModel.find()
+
+    res.render('list', {
+        title: 'Customers list',
+        users
+    })
+}
+
 module.exports = {
     dashboard,
     pageReg,
     regCustomer,
+    listCustomers
 }

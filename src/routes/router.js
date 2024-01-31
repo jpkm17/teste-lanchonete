@@ -14,5 +14,7 @@ router.get('/dashboard', dashboardRouter.dashboard)
 router.get('/regCustomer', dashboardRouter.pageReg)
 router.post('/regCustomer/reg', dashboardRouter.regCustomer)
 
+//Listar clientes
+router.get('/listCustomer', dashboardRouter.listCustomers)
 
 module.exports = router
