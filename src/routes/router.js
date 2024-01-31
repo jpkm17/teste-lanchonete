@@ -1,17 +1,18 @@
 const router = require('express').Router()
 
 const loginRouter = require('../controllers/loginController')
-const panelRouter = require('../controllers/panelController')
+const dashboardRouter = require('../controllers/dashboardController')
 
 //Tela de login
-// router.get('/', loginRouter.login)
+router.get('/', loginRouter.login)
 router.post('/checkLogin', loginRouter.checkLogin) // Confere os dados do forms
 
 //Painel do administrador
-router.get('/panel', panelRouter.dashboard)
+router.get('/dashboard', dashboardRouter.dashboard)
 
 //Cadastrar Cliente 
-router.get('/regCustomer', panelRouter.pageReg)
-router.post('/regCustomer/reg', panelRouter.regCustomer)
+router.get('/regCustomer', dashboardRouter.pageReg)
+router.post('/regCustomer/reg', dashboardRouter.regCustomer)
+
 
 module.exports = router

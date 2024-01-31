@@ -1,7 +1,7 @@
 const CustomerModel = require('../models/customer')
 
 function dashboard(req, res) {
-    res.render('panel', {
+    res.render('dashboard', {
         title: "Admin dashboard"
     })
 }
@@ -14,14 +14,14 @@ function pageReg(req, res) {
 
 function regCustomer(req, res) {
     const {
-        user,
+        name,
         email,
         phone,
         address
     } = req.body
 
     const register = new CustomerModel({
-        user,
+        name,
         email,
         phone,
         address
@@ -38,5 +38,5 @@ function regCustomer(req, res) {
 module.exports = {
     dashboard,
     pageReg,
-    regCustomer
+    regCustomer,
 }
