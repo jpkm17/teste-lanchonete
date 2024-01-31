@@ -44,9 +44,18 @@ async function listCustomers(req, res){
     })
 }
 
+async function remove(req, res){
+    const {id} = req.params
+
+    const remove = await CustomerModel.deleteOne({_id: id})
+
+    res.redirect('/listCustomer')
+}
+
 module.exports = {
     dashboard,
     pageReg,
     regCustomer,
-    listCustomers
+    listCustomers,
+    remove
 }
