@@ -12,10 +12,10 @@ const CustomerModel = mongoose.model('Customer', schema)
 /* 
 ADICIONA UM USUARIO NO BANCO E SALVA 
 const newCustomer = new CustomerModel({ 
-    nome: 'Teste nome',
-    email:'', 
-    telefone:'',
-    endereco:'' 
+    name: 'Teste nome',
+    email:'teste@gmail.com', 
+    phone:'999990',
+    address:'casa da mae joana' 
 })
 newCustomer.save()
 */ 
