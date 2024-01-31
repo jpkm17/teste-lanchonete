@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-</head>
-<body>
-    
+<%- include('partials/head.ejs') %>
     <h1>Cadastro de cliente</h1>
     <% if(typeof message !== 'undefined') { %>
-         <span><%- message %></span>
+        <span><%- message %></span>
     <%} %>
 
     <form action="/regCustomer/reg" id="form" method="post">
@@ -35,5 +27,4 @@
 
         <button type="submit">Enviar</button>
     </form>
-</body>
-</html>
+<%- include('partials/foot.ejs') %>
